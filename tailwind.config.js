@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,7 +17,7 @@ module.exports = {
         accent: '#3ECF8E',
         'accent-alt': '#7C3AED',
         
-        // shadcn/ui compatibility
+        // shadcn/ui compatibility with proper utility class mapping
         background: '#F5EFE7',
         foreground: '#0F172A',
         primary: {
@@ -35,10 +36,6 @@ module.exports = {
           DEFAULT: '#D9D3CC',
           foreground: '#0F172A',
         },
-        accent: {
-          DEFAULT: '#3ECF8E',
-          foreground: '#0F172A',
-        },
         popover: {
           DEFAULT: '#F5EFE7',
           foreground: '#0F172A',
@@ -50,13 +47,6 @@ module.exports = {
         border: '#D9D3CC',
         input: '#D9D3CC',
         ring: '#3ECF8E',
-      },
-      borderColor: {
-        DEFAULT: '#D9D3CC',
-        border: '#D9D3CC',
-      },
-      backgroundColor: {
-        background: '#F5EFE7',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
