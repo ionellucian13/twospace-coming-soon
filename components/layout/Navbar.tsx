@@ -24,7 +24,6 @@ export default function Navbar() {
     { name: 'Pachete', href: '/packages' },
     { name: 'Cazuri', href: '/cases' },
     { name: 'Cafe', href: '/cafe' },
-    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ]
 

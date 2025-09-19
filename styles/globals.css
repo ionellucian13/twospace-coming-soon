@@ -42,6 +42,9 @@
   /* Custom utilities */
   --border-radius-xl: 20px;
   --box-shadow-soft: 0 6px 20px rgba(10,10,10,.06);
+  
+  /* Typography */
+  --font-heading: var(--font-heading);
 }
 
 /* Custom utility classes */
