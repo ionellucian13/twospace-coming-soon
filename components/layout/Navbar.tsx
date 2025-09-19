@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { List, X as XIcon, Rocket, ChatCircle } from 'phosphor-react'
 import { Button } from '../ui/button'
 
 export default function Navbar() {
@@ -92,6 +92,7 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent hover:text-white px-5 py-2 rounded-xl transition-all duration-300 font-medium">
+                  <ChatCircle size={18} weight="duotone" className="mr-2" />
                   Contact
                 </Button>
               </motion.div>
@@ -102,7 +103,8 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-xl shadow-hover font-medium">
-                  🚀 Start Project
+                  <Rocket size={18} weight="duotone" className="mr-2" />
+                  Start Project
                 </Button>
               </motion.div>
             </Link>
@@ -114,7 +116,7 @@ export default function Navbar() {
             className="lg:hidden p-2 text-ink"
             aria-label="Toggle navigation menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <XIcon size={24} weight="bold" /> : <List size={24} weight="bold" />}
           </button>
         </div>
 
@@ -142,12 +144,14 @@ export default function Navbar() {
                 <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-stone/20">
                   <Link href="/contact">
                     <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent hover:text-white w-full font-medium">
+                      <ChatCircle size={18} weight="duotone" className="mr-2" />
                       Contact
                     </Button>
                   </Link>
                   <Link href="/contact">
                     <Button className="bg-accent hover:bg-accent/90 text-white w-full font-medium">
-                      🚀 Start Project
+                      <Rocket size={18} weight="duotone" className="mr-2" />
+                      Start Project
                     </Button>
                   </Link>
                 </div>
