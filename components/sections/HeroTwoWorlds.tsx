@@ -153,9 +153,9 @@ export default function HeroTwoWorlds() {
                       </Button>
                     </motion.div>
                   </Link>
-                  <Link href="/contact">
+                  <Link href="/cafe#booking">
                     <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
-                      <Button className="btn-secondary text-lg px-10 py-5 rounded-2xl border-2 border-espresso/30 hover:border-espresso text-espresso">
+                      <Button className="bg-transparent border-2 border-espresso text-espresso hover:bg-espresso hover:text-cream text-lg px-10 py-5 rounded-2xl transition-all duration-300">
                         🪑 Rezervă masa
                       </Button>
                     </motion.div>
