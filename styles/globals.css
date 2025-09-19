@@ -5,21 +5,21 @@
 /* Two Space Brand Design System */
 @layer base {
   :root {
-    --background: #F5EFE7;
+    --background: #F7F3EE;
     --foreground: #0F172A;
-    --primary: #3ECF8E;
+    --primary: #10B981;
     --primary-foreground: #ffffff;
-    --secondary: #D9D3CC;
+    --secondary: #ECE6DE;
     --secondary-foreground: #0F172A;
-    --muted: #D9D3CC;
+    --muted: #ECE6DE;
     --muted-foreground: #0F172A;
-    --accent: #3ECF8E;
+    --accent: #10B981;
     --accent-foreground: #0F172A;
     --destructive: #ef4444;
     --destructive-foreground: #ffffff;
-    --border: #D9D3CC;
-    --input: #D9D3CC;
-    --ring: #3ECF8E;
+    --border: #ECE6DE;
+    --input: #ECE6DE;
+    --ring: #10B981;
     --radius: 20px;
   }
 
@@ -28,7 +28,7 @@
   }
   
   body {
-    background-color: #F5EFE7;
+    background-color: #F7F3EE;
     color: #0F172A;
     font-family: var(--font-inter, Inter, system-ui, sans-serif);
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -39,13 +39,17 @@
 }
 
 @layer components {
-  /* Two Space Design Components */
+  /* Two Space Premium Design Components */
   .gradient-bg {
-    background: linear-gradient(135deg, #F5EFE7 0%, #E8DFD6 100%);
+    background: linear-gradient(135deg, #F7F3EE 0%, #ECE6DE 100%);
   }
   
   .gradient-accent {
-    background: linear-gradient(135deg, #3ECF8E 0%, #2BB879 100%);
+    background: linear-gradient(135deg, #10B981 0%, #0EA5A2 100%);
+  }
+  
+  .gradient-premium {
+    background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
   }
   
   .glass-card {

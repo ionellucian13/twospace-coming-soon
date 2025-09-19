@@ -9,23 +9,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Two Space Brand Colors
-        cream: '#F5EFE7',
+        // Two Space Premium Brand Colors
+        cream: '#F7F3EE',
         ink: '#0F172A',
-        stone: '#D9D3CC', 
-        espresso: '#2B1E16',
-        accent: '#3ECF8E',
+        stone: '#ECE6DE', 
+        espresso: '#1E1510',
+        accent: '#10B981',
+        jade: '#0EA5A2',
+        seafoam: '#34D399',
         'accent-alt': '#7C3AED',
         
         // shadcn/ui colors
-        background: '#F5EFE7',
+        background: '#F7F3EE',
         foreground: '#0F172A',
         primary: {
-          DEFAULT: '#3ECF8E',
+          DEFAULT: '#10B981',
           foreground: '#ffffff',
         },
         secondary: {
-          DEFAULT: '#D9D3CC',
+          DEFAULT: '#ECE6DE',
           foreground: '#0F172A',
         },
         destructive: {
@@ -33,24 +35,24 @@ module.exports = {
           foreground: '#ffffff',
         },
         muted: {
-          DEFAULT: '#D9D3CC', 
+          DEFAULT: '#ECE6DE', 
           foreground: '#0F172A',
         },
         popover: {
-          DEFAULT: '#F5EFE7',
+          DEFAULT: '#F7F3EE',
           foreground: '#0F172A',
         },
         card: {
-          DEFAULT: '#F5EFE7',
+          DEFAULT: '#F7F3EE',
           foreground: '#0F172A',
         },
-        border: '#D9D3CC',
-        input: '#D9D3CC',
-        ring: '#3ECF8E',
+        border: '#ECE6DE',
+        input: '#ECE6DE',
+        ring: '#10B981',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-heading)', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Geist', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -73,9 +75,29 @@ module.exports = {
         '2xl': '20px',
       },
       boxShadow: {
+        // Premium elevation system
         soft: '0 6px 20px rgba(10,10,10,.06)',
         card: '0 4px 12px rgba(15, 23, 42, 0.08)',
         hover: '0 8px 25px rgba(15, 23, 42, 0.12)',
+        premium: '0 20px 40px rgba(15, 23, 42, 0.08), 0 8px 16px rgba(15, 23, 42, 0.05)',
+        glow: '0 0 20px rgba(16, 185, 129, 0.15)',
+        'glow-hover': '0 0 30px rgba(16, 185, 129, 0.25)',
+      },
+      zIndex: {
+        // Elevation tokens
+        'z0': '0',
+        'z1': '10',
+        'z2': '20',
+        'z3': '30',
+        'modal': '1000',
+        'dropdown': '1000',
+        'sticky': '1020',
+        'fixed': '1030',
+        'modal-backdrop': '1040',
+        'offcanvas': '1050',
+        'popover': '1060',
+        'tooltip': '1070',
+        'toast': '1080',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

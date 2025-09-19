@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter, Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import '../styles/globals.css'
 
@@ -10,7 +10,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const heading = Plus_Jakarta_Sans({ 
+const heading = Geist({ 
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-heading',
