@@ -29,8 +29,28 @@
   --color-input: #D9D3CC;
   --color-ring: #3ECF8E;
   --color-border: #D9D3CC;
+  
+  /* shadcn/ui compatibility */
+  --color-primary: #3ECF8E;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #D9D3CC;
+  --color-secondary-foreground: #0F172A;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-accent-foreground: #0F172A;
+  
+  /* Custom utilities */
   --border-radius-xl: 20px;
   --box-shadow-soft: 0 6px 20px rgba(10,10,10,.06);
+}
+
+/* Custom utility classes */
+.shadow-soft {
+  box-shadow: 0 6px 20px rgba(10,10,10,.06);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 /* Base styles */
