@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Inter font is loaded via next/font in layout.tsx */
+
+/* Design Tokens - Tailwind v4 style */
+@theme {
+  --color-bg: #F5EFE7;
+  --color-ink: #0F172A;
+  --color-stone: #D9D3CC;
+  --color-espresso: #2B1E16;
+  --color-accent: #3ECF8E;
+  --color-accent-alt: #7C3AED;
+  --color-cream: #F5EFE7;
+  --radius: 20px;
+  --shadow: 0 6px 20px rgba(10,10,10,.06);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-display: swap;
+}
+
+body {
+  color: var(--color-ink);
+  background: var(--color-bg);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,307 @@
+Two Space — Website Proposal (UX/UI + Tech)
+
+Concept: Super-creativ, modern, cu efecte și tranziții rafinate; aerisit și ușor de folosit. Brand-site dual „Coffee × Marketing” care convertește lead-uri și aduce trafic în spațiul fizic.
+
+Viziune & Poziționare
+
+Two Space = Coffee × Marketing Hub.
+Pilonii: profesionalism, rafinament, util (fără zgomot).
+Mood: cald (cafea) + precis (strategie). Interfață aerisită, micro-interacțiuni cu sens.
+
+Obiective cheie
+
+Convinge rapid că Two Space oferă servicii reale de marketing (portofoliu & rezultate).
+
+Transformă traficul local în vizite la cafenea (meniu, evenimente, orar).
+
+Convertește lead-uri: consultanță, workshop, abonamente.
+
+Informație & Sitemap (IA)
+
+Home
+
+Marketing
+
+Servicii (Branding, Inițiere, Cercetare, Digital & Growth)
+
+Pachete (Start-up / Dezvoltare / Premium) – comparativ
+
+Studii de caz
+
+Testimoniale
+
+Cafe
+
+Meniu
+
+Evenimente & Rezervări
+
+Spațiu / Galerie
+
+About
+
+Poveste & misiune
+
+Echipă
+
+Manifest (Two Space = două lumi)
+
+Blog / Insights
+
+Contact
+
+Programări (cal.com)
+
+Formular brief rapid
+
+[CTA fix] Start a Project / Rezervă o discuție
+
+Footer: meniu secundar, social, GDPR/ToS, newsletter, adresă & hartă.
+
+UX: Fluxuri principale
+
+F1 – Prospect servicii marketing: Home → „Vezi Pachete” → compară → „Cere ofertă” (brief scurt + slot calendar).
+
+F2 – Vizitator cafenea: Home → „Meniu” + „Evenimente” → rezervare (WhatsApp/telefon & form).
+
+F3 – Validare socială: Home → „Studii de caz” → detaliu → CTA „Începe proiect”.
+
+Structură pagini (wireframe la nivel de secțiuni)
+Home
+
+Hero split (Two worlds) – panou dublu cu toggle „Marketing / Cafe” (animat). CTA-uri: Start a Project / See the Menu.
+
+Ce facem (4 carduri) – Branding, Inițiere, Cercetare, Growth.
+
+Pachete & prețuri (teaser comparativ) – 3 coloane; CTA „Compară toate”.
+
+Studii de caz (carousel) – metrici concreți (ex: +38% organic, CAC -27%).
+
+Meniu & Evenimente (teaser) – 3 produse best-seller + „Next event: Workshop”.
+
+Testimoniale / logo-wall clienți.
+
+Newsletter & CTA final (brief rapid).
+
+Marketing / Servicii
+
+Intro scurt + diferențiatori.
+
+Tabs: Branding | Inițiere | Cercetare | Alte servicii (livrabile, timpi, from-price).
+
+Pachete comparativ (tabel min–max + ce e inclus).
+
+Proces & timeline (4 pași: Discovery → Design → Build → Grow).
+
+FAQ + CTA (programare).
+
+Pachete
+
+Tabel comparativ complet (min–max) + add-ons + „Cum calculăm prețul”.
+
+CTA: „Cere ofertă” (brief + atașamente).
+
+Studii de caz
+
+Listă carduri cu metrici mari; filtru (industrie/obiectiv).
+
+Pagină detaliu: context → soluție → rezultate → stack → imagini.
+
+Cafe (Meniu & Evenimente)
+
+Meniu: carduri simple, preț, filtre (cafea/ceai/specials).
+
+Evenimente: calendar simplu + „Rezervă loc”.
+
+Spațiu: galerie foto, orar, adresă, hartă, Wi-Fi, prize, reguli.
+
+About
+
+Poveste, valori, numele „Two Space” (de ce două spații), fotografie echipă.
+
+Cariere (teaser).
+
+Contact
+
+Două coloane: (1) programare consultanță (cal.com embed), (2) formular scurt (nume, email, buget, obiectiv).
+
+Date, hartă, social.
+
+Art Direction (stil vizual)
+
+Paletă
+
+Espresso #2B1E16 (accent dark), Cream #F5EFE7 (background), Stone #D9D3CC (borders/subtle), Ink #0F172A (text)
+
+Accent #3ECF8E (CTA) & Accent-Alt #7C3AED (hover/markers)
+
+Status: Green #22C55E, Amber #F59E0B, Red #EF4444
+
+Tipografie
+
+Headings: Satoshi/General Sans (geometric, modern)
+
+Body: Inter (lizibilitate excelentă)
+
+Scale: 12/14/16 body, H6=18 → H1=48/56; line-height generos; tracking ușor negativ pe titluri.
+
+Grid & spațiere
+
+Container 1200px, 12 coloane, 8-pt spacing (Tailwind scale)
+
+Carduri cu radius 16–20px, shadow foarte subtil, border 1px Stone
+
+Iconografie lucide, linii fine; textură discretă (granulație 2–3% pe dark).
+
+Motion Spec (efecte & tranziții)
+
+Durate: 160–240ms UI; 300–600ms intrări secțiuni; easing cubic-bezier(0.22, 1, 0.36, 1).
+
+Stagger: 60–80ms între carduri; slide direcțional din zona de interes.
+
+Scroll reveal: la 12% viewport, o singură dată; respectăm prefers-reduced-motion.
+
+Page transitions: cross-fade + slide 8px; header persistent.
+
+Hero: masked text reveal, micro-parallax 3–5px, blur „steam” subtil pe zona Coffee.
+
+Hover states: lift + outline accent-alt 1px la focus, cursor magnetic pe CTA.
+
+Componente & Micro-interacțiuni
+
+World Switch (toggle): morph al accent color + swap al secțiunilor teaser (motion layout).
+
+Smart Navbar: sticky, se compactează la scroll; progress bar subțire pe articole.
+
+Pricing Table: comparativ + tooltip „ce include”.
+
+CaseStudy Card: big metrics (count-up), swipe pe mobile.
+
+Event Card + Mini Calendar: scroll snap orizontal, modal blur.
+
+Menu Item: mască curbată pe imagine, badge „best seller”.
+
+Toast non-intrusive: confirmări pentru brief/rezervare.
+
+Accesibilitate & Performanță
+
+Contrast AA/AAA, focus states vizibile, landmark roles, navigare tastatură.
+
+Imagini AVIF/WebP, lazy + priority pe LCP; font-display: swap; LCP < 2.0s, CLS ~0.
+
+„Motion safe”: dezactivăm parallax/anim heavy la prefers-reduced-motion.
+
+Tech Stack & Arhitectură
+
+Frontend: Next.js (App Router, RSC), TailwindCSS + shadcn/ui, Framer Motion, Lenis (smooth scroll ușor)
+CMS: Sanity / Strapi (scheme: Pages, Services, Packages, CaseStudies, Events, MenuItem)
+Forms & Email: Next API + Resend/Mailgun (double opt-in newsletter)
+Booking: Cal.com integrat (drawer/modal)
+Analytics & Logs: Vercel Analytics, Sentry (tracing + replay)
+SEO: next-seo, schema.org (Organization, LocalBusiness, Product, Event, Article)
+Deploy: Vercel (FE), Railway/Render/Supabase (dacă avem BE dedicat)
+
+Design Tokens (exemplu)
+:root {
+  --bg: #F5EFE7;
+  --ink: #0F172A;
+  --stone: #D9D3CC;
+  --espresso: #2B1E16;
+  --accent: #3ECF8E;
+  --accent-alt: #7C3AED;
+  --radius: 20px;
+  --shadow: 0 6px 20px rgba(10,10,10,.06);
+}
+
+Snippets (exemple)
+Framer Motion — Card Reveal
+<motion.article
+  initial={{ opacity: 0, y: 12 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.28, ease: [0.22,1,0.36,1] }}
+  className="rounded-2xl border border-stone bg-white p-6 shadow-sm"
+>
+  {/* content */}
+</motion.article>
+
+Hero (structură React/Tailwind)
+export default function Hero() {
+  return (
+    <section className="relative bg-cream">
+      <div className="mx-auto max-w-6xl px-6 py-20 grid gap-10 md:grid-cols-2">
+        {/* Marketing */}
+        <div className="rounded-2xl border border-stone p-8 bg-white shadow-sm">
+          <h1 className="text-4xl md:text-5xl font-semibold text-ink">
+            We brew ideas that sell.
+          </h1>
+          <p className="mt-4 text-ink/70">
+            Branding, lansare, growth. Pachete clare, rezultate măsurabile.
+          </p>
+          <div className="mt-6 flex items-center gap-3">
+            <a className="inline-flex items-center rounded-xl px-5 py-3 bg-accent text-white font-medium">
+              Start a project
+            </a>
+            <a className="inline-flex items-center rounded-xl px-5 py-3 border border-stone">
+              See packages
+            </a>
+          </div>
+        </div>
+
+        {/* Cafe */}
+        <div className="rounded-2xl border border-stone p-8 bg-espresso text-cream shadow-sm">
+          <h2 className="text-4xl md:text-5xl font-semibold">
+            Coffee for minds at work.
+          </h2>
+          <p className="mt-4 text-cream/80">
+            Meniu scurt, evenimente, spațiu de idei.
+          </p>
+          <div className="mt-6 flex items-center gap-3">
+            <a className="inline-flex items-center rounded-xl px-5 py-3 bg-cream text-ink font-medium">
+              See the menu
+            </a>
+            <a className="inline-flex items-center rounded-xl px-5 py-3 border border-cream/30">
+              Book an event
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Conținut & Pachete (exemplu)
+
+Branding Starter: Logo, Naming, Ton of Voice, Mini brand-book — from 6.000 RON
+
+Launch Kit: Branding Starter + Site 5 pagini + Social setup + SEO inițial — from 12.000 RON
+
+Growth (abonament): SMM 2 rețele, Ads management, SEO ongoing, email — 6.000–12.000 RON/lună
+
+Evenimente: Workshop „Brand în 7 pași”, Coffee cu antreprenori (Stripe/Cal)
+
+Performanță & Calitate
+
+Lighthouse ≥ 90, LCP < 2.0s, CLS ~0, accesibilitate AA/AAA.
+
+Testare: unit + e2e (Playwright), Sentry Replay pentru UX issues, heatmaps opțional (Plausible/Umami Events).
+
+Plan de Implementare (milestones)
+
+Moodboard & style tiles (paletă, tipografie, componente cheie) — 2 zile
+
+Wireframes hi-fi + motion storyboard — 4–5 zile
+
+UI kit (shadcn + tokens) & prototip interactiv — 4 zile
+
+Implementare Next.js: Home, Marketing, Pachete, Cafe, About, Contact — 7–10 zile
+
+QA accesibilitate + performanță, SEO, analytics — 2 zile
+
+Note finale
+
+Creativ, fluid, dar aerisit și clar.
+
+Animațiile ghidează, nu distra(g).
+
+Conținut modular (CMS) pentru iterații rapide, localizare RO/EN, scalabil ca SaaS dacă dorim ulterior.
