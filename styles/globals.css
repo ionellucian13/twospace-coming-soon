@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Inter font is loaded via next/font in layout.tsx */
+@import "tailwindcss";
 
 /* Two Space Design Tokens */
 :root {
@@ -18,6 +14,23 @@
   /* Design System */
   --radius: 20px;
   --shadow: 0 6px 20px rgba(10,10,10,.06);
+}
+
+/* TailwindCSS v4 theme configuration */
+@theme inline {
+  --color-cream: #F5EFE7;
+  --color-ink: #0F172A;
+  --color-stone: #D9D3CC;
+  --color-espresso: #2B1E16;
+  --color-accent: #3ECF8E;
+  --color-accent-alt: #7C3AED;
+  --color-background: #F5EFE7;
+  --color-foreground: #0F172A;
+  --color-input: #D9D3CC;
+  --color-ring: #3ECF8E;
+  --color-border: #D9D3CC;
+  --border-radius-xl: 20px;
+  --box-shadow-soft: 0 6px 20px rgba(10,10,10,.06);
 }
 
 /* Base styles */
