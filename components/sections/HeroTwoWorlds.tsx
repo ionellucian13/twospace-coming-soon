@@ -20,7 +20,6 @@ export default function HeroTwoWorlds() {
       
       <div className="relative mx-auto max-w-7xl px-6 py-20 z-10">
         {/* World Toggle */}
-        {/* Enhanced World Toggle */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,18 +60,12 @@ export default function HeroTwoWorlds() {
         </motion.div>
 
         {/* Hero Content */}
-        <div className="grid gap-16 lg:grid-cols-2 items-center">
-          {/* Marketing Side */}
+        <div className="text-center max-w-5xl mx-auto">
           <motion.div
-            key={activeWorld === 'marketing' ? 'marketing-active' : 'marketing-inactive'}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ 
-              opacity: activeWorld === 'marketing' ? 1 : 0.6, 
-              x: 0,
-              scale: activeWorld === 'marketing' ? 1 : 0.95
-            }}
+            key={activeWorld}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.22,1,0.36,1] }}
-            className="text-center lg:text-left"
           >
             <motion.h1 
               className="text-6xl lg:text-7xl font-bold font-heading text-ink leading-tight mb-6"
@@ -80,23 +73,44 @@ export default function HeroTwoWorlds() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              We brew{' '}
-              <span className="relative">
-                <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
-                  ideas
-                </span>
-                <motion.div
-                  className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent/80 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
-                  transition={{ delay: 1, duration: 0.6 }}
-                />
-              </span>
-              <br />
-              <span className="text-5xl lg:text-6xl">that sell.</span>
+              {activeWorld === 'marketing' ? (
+                <>
+                  We brew{' '}
+                  <span className="relative">
+                    <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
+                      ideas
+                    </span>
+                    <motion.div
+                      className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent/80 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: '100%' }}
+                      transition={{ delay: 1, duration: 0.6 }}
+                    />
+                  </span>
+                  <br />
+                  <span className="text-5xl lg:text-6xl">that sell.</span>
+                </>
+              ) : (
+                <>
+                  Coffee for{' '}
+                  <span className="relative">
+                    <span className="bg-gradient-to-r from-espresso to-espresso/80 bg-clip-text text-transparent">
+                      minds
+                    </span>
+                    <motion.div
+                      className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-espresso to-espresso/80 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: '100%' }}
+                      transition={{ delay: 1, duration: 0.6 }}
+                    />
+                  </span>
+                  <br />
+                  <span className="text-5xl lg:text-6xl">at work.</span>
+                </>
+              )}
             </motion.h1>
             <motion.p 
-              className="text-xl lg:text-2xl text-ink/70 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8"
+              className="text-xl lg:text-2xl text-ink/70 leading-relaxed max-w-3xl mx-auto mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -108,7 +122,7 @@ export default function HeroTwoWorlds() {
             </motion.p>
 
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-6 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -135,7 +149,7 @@ export default function HeroTwoWorlds() {
                   <Link href="/cafe">
                     <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                       <Button className="bg-espresso hover:bg-espresso/90 text-cream text-lg px-10 py-5 rounded-2xl shadow-hover">
-                        ☕ Vizitează cafeneaua <ArrowRight className="ml-2 h-5 w-5" />
+                        ☕ Vezi meniul <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </motion.div>
                   </Link>
@@ -148,55 +162,6 @@ export default function HeroTwoWorlds() {
                   </Link>
                 </>
               )}
-            </motion.div>
-          </motion.div>
-
-          {/* Coffee Side */}
-          <motion.div
-            key={activeWorld === 'coffee' ? 'coffee-active' : 'coffee-inactive'}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ 
-              opacity: activeWorld === 'coffee' ? 1 : 0.6, 
-              x: 0,
-              scale: activeWorld === 'coffee' ? 1 : 0.95
-            }}
-            transition={{ duration: 0.5, ease: [0.22,1,0.36,1] }}
-            className="text-center lg:text-right"
-          >
-            <motion.h2 
-              className="text-5xl lg:text-6xl font-bold font-heading text-ink leading-tight"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              Coffee for minds 
-              <span className="block text-espresso">at work.</span>
-            </motion.h2>
-            <motion.p 
-              className="mt-6 text-xl text-ink/70 leading-relaxed max-w-lg mx-auto lg:mx-0 lg:ml-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              Meniu scurt, evenimente inspiraționale, spațiu perfect pentru idei 
-              și colaborări creative.
-            </motion.p>
-            <motion.div 
-              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Button asChild size="lg" className="bg-espresso hover:bg-espresso/90 text-cream">
-                <Link href="/cafe" className="flex items-center gap-2">
-                  See the menu <ArrowRight size={18} />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/cafe#events">
-                  Book an event
-                </Link>
-              </Button>
             </motion.div>
           </motion.div>
         </div>
