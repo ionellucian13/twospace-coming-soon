@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Button } from '../ui/button'
 import { ArrowRight } from 'lucide-react'
 
 export default function HeroTwoWorlds() {
   const [activeWorld, setActiveWorld] = useState<'marketing' | 'coffee'>('marketing')
+  const shouldReduceMotion = useReducedMotion()
 
   return (
     <section className="relative bg-cream min-h-screen flex items-center">
