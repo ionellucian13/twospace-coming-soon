@@ -17,7 +17,7 @@
 }
 
 /* TailwindCSS v4 theme configuration */
-@theme inline {
+@theme {
   --color-cream: #F5EFE7;
   --color-ink: #0F172A;
   --color-stone: #D9D3CC;
