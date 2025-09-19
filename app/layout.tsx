@@ -1,12 +1,19 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import '../styles/globals.css'
 
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-inter',
+})
+
+const heading = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-heading',
 })
 
 export const metadata: Metadata = {
@@ -40,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ro" className={inter.className}>
-      <body>
+    <html lang="ro" className={`${inter.variable} ${heading.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

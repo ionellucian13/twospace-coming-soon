@@ -14,8 +14,8 @@ module.exports = {
         'soft': 'var(--shadow)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['General Sans', 'Satoshi', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Plus Jakarta Sans', 'sans-serif'],
       },
     },
   },
