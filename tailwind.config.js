@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,7 +15,7 @@ module.exports = {
         espresso: '#2B1E16',
         accent: '#3ECF8E',
         'accent-alt': '#7C3AED',
-        
+
         // shadcn/ui compatibility with proper utility class mapping
         background: '#F5EFE7',
         foreground: '#0F172A',
