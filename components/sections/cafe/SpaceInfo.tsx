@@ -251,3 +251,155 @@ export default function SpaceInfo() {
     </section>
   )
 }
+'use client'
+
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card'
+import { Wifi, Zap, Coffee, Car, Clock, Users, MapPin, Phone } from 'lucide-react'
+
+export default function SpaceInfo() {
+  const facilities = [
+    {
+      icon: Wifi,
+      title: 'Wi-Fi gratuit',
+      description: 'Internet de mare viteză pentru toți clienții'
+    },
+    {
+      icon: Zap,
+      title: 'Prize pentru laptop',
+      description: 'Locuri de muncă cu acces la curent'
+    },
+    {
+      icon: Coffee,
+      title: 'Cafea premium',
+      description: 'Boabe proaspăt măcinate, preparate de barista'
+    },
+    {
+      icon: Car,
+      title: 'Parcare gratuită',
+      description: 'Locuri de parcare disponibile'
+    },
+    {
+      icon: Users,
+      title: 'Cameră privată',
+      description: 'Sală de ședințe pentru întâlniri'
+    },
+    {
+      icon: Clock,
+      title: 'Program flexibil',
+      description: 'Deschis până târziu pentru night owls'
+    }
+  ]
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold font-heading text-ink mb-6">
+            Facilități & Informații
+          </h2>
+          <p className="text-xl text-ink/70 max-w-3xl mx-auto">
+            Tot ce ai nevoie pentru o experiență perfectă în Coffee Space
+          </p>
+        </motion.div>
+
+        {/* Facilities Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {facilities.map((facility, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: [0.22,1,0.36,1]
+              }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="h-full hover:shadow-soft transition-all duration-300 border-stone bg-cream">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <facility.icon size={32} className="text-accent" />
+                  </div>
+                  <CardTitle className="text-lg font-heading text-ink">
+                    {facility.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0 text-center">
+                  <p className="text-ink/70 leading-relaxed">
+                    {facility.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Contact & Location Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="grid md:grid-cols-2 gap-8"
+        >
+          {/* Location */}
+          <Card className="border-stone bg-white">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-ink">
+                <MapPin className="text-accent" size={24} />
+                Locația noastră
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <p className="font-medium text-ink">Adresa</p>
+                <p className="text-ink/70">Strada Creativității 123, Cluj-Napoca</p>
+              </div>
+              <div>
+                <p className="font-medium text-ink">Program</p>
+                <div className="text-ink/70 space-y-1">
+                  <p>Luni - Vineri: 08:00 - 22:00</p>
+                  <p>Sâmbătă - Duminică: 09:00 - 23:00</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Contact */}
+          <Card className="border-stone bg-white">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-ink">
+                <Phone className="text-accent" size={24} />
+                Contact rapid
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <p className="font-medium text-ink">Telefon</p>
+                <p className="text-accent font-medium">+40 721 234 567</p>
+              </div>
+              <div>
+                <p className="font-medium text-ink">Email</p>
+                <p className="text-accent font-medium">hello@twospace.ro</p>
+              </div>
+              <div>
+                <p className="font-medium text-ink">Rezervări</p>
+                <p className="text-ink/70">Răspuns în max 2 ore</p>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
