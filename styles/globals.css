@@ -72,16 +72,9 @@
   border-radius: 1rem;
 }
 
-/* Base styles */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-/* Focus styles - use focus-visible instead of focus for better UX */
+/* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid hsl(var(--accent));
   outline-offset: 2px;
 }
 
@@ -92,22 +85,9 @@ body {
   font-display: swap;
 }
 
-body {
-  color: var(--color-ink);
-  background: var(--color-bg);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
 }
 
 /* Respect reduced motion */

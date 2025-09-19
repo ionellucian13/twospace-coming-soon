@@ -51,6 +51,13 @@ module.exports = {
         input: '#D9D3CC',
         ring: '#3ECF8E',
       },
+      borderColor: {
+        DEFAULT: '#D9D3CC',
+        border: '#D9D3CC',
+      },
+      backgroundColor: {
+        background: '#F5EFE7',
+      },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
         heading: ['var(--font-heading)', 'Plus Jakarta Sans', 'sans-serif'],
