@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,15 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Two Space Brand Palette
+        // Two Space Brand Colors
         cream: '#F5EFE7',
-        ink: '#0F172A', 
-        stone: '#D9D3CC',
+        ink: '#0F172A',
+        stone: '#D9D3CC', 
         espresso: '#2B1E16',
         accent: '#3ECF8E',
         'accent-alt': '#7C3AED',
-
-        // shadcn/ui compatibility with proper utility class mapping
+        
+        // shadcn/ui colors
         background: '#F5EFE7',
         foreground: '#0F172A',
         primary: {
@@ -32,7 +33,7 @@ module.exports = {
           foreground: '#ffffff',
         },
         muted: {
-          DEFAULT: '#D9D3CC',
+          DEFAULT: '#D9D3CC', 
           foreground: '#0F172A',
         },
         popover: {
@@ -48,8 +49,8 @@ module.exports = {
         ring: '#3ECF8E',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
-        heading: ['var(--font-heading)', 'Plus Jakarta Sans', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -65,20 +66,16 @@ module.exports = {
         '7xl': ['4.5rem', { lineHeight: '1' }],
       },
       borderRadius: {
-        'lg': '20px',
-        'md': '12px',
-        'sm': '8px',
-        'xl': '20px',
+        lg: '20px',
+        md: '12px',
+        sm: '8px',
+        xl: '20px',
         '2xl': '20px',
       },
       boxShadow: {
-        'soft': '0 6px 20px rgba(10,10,10,.06)',
-        'card': '0 4px 12px rgba(15, 23, 42, 0.08)',
-        'hover': '0 8px 25px rgba(15, 23, 42, 0.12)',
-      },
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
+        soft: '0 6px 20px rgba(10,10,10,.06)',
+        card: '0 4px 12px rgba(15, 23, 42, 0.08)',
+        hover: '0 8px 25px rgba(15, 23, 42, 0.12)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
@@ -101,5 +98,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+}
 }
