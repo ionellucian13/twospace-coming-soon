@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/button'
+import { Sparkles } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -83,7 +84,7 @@ export default function Navbar() {
                 </Link>
               </motion.div>
             ))}
-            
+
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -105,14 +106,17 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button 
-              asChild
-              className="bg-accent hover:bg-accent/90 text-white font-medium px-6"
-            >
-              <Link href="/contact">
-                Start a Project
+            <Link href="/contact">
+                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white px-6 py-2 rounded-xl transition-all duration-300">
+                  <Sparkles className="mr-2 h-4 w-4" />
+                  Contact
+                </Button>
               </Link>
-            </Button>
+              <Link href="/contact">
+                <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-xl shadow-hover">
+                  Start a Project
+                </Button>
+              </Link>
           </div>
 
           {/* Mobile Menu Button */}
