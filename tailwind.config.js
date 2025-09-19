@@ -15,6 +15,13 @@ module.exports = {
         espresso: 'var(--color-espresso)',
         accent: 'var(--color-accent)',
         'accent-alt': 'var(--color-accent-alt)',
+        
+        // Essential shadcn/ui tokens
+        background: '#F5EFE7', // cream
+        foreground: '#0F172A', // ink
+        input: '#D9D3CC', // stone
+        ring: '#3ECF8E', // accent
+        border: '#D9D3CC', // stone
       },
       borderRadius: {
         'xl': 'var(--radius)',
