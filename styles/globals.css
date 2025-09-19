@@ -1,50 +1,66 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Two Space Design Tokens */
-:root {
-  /* Brand Colors */
-  --color-bg: #F5EFE7;
-  --color-ink: #0F172A;
-  --color-stone: #D9D3CC;
-  --color-espresso: #2B1E16;
-  --color-accent: #3ECF8E;
-  --color-accent-alt: #7C3AED;
-  --color-cream: #F5EFE7;
-  
-  /* Design System */
-  --radius: 20px;
-  --shadow: 0 6px 20px rgba(10,10,10,.06);
+/* Two Space Design System */
+@layer base {
+  :root {
+    /* Two Space Brand Colors */
+    --background: 245 239 231; /* #F5EFE7 cream */
+    --foreground: 15 23 42;    /* #0F172A ink */
+    --primary: 60 207 142;     /* #3ECF8E accent */
+    --primary-foreground: 255 255 255;
+    --secondary: 217 211 204;  /* #D9D3CC stone */
+    --secondary-foreground: 15 23 42;
+    --muted: 217 211 204;
+    --muted-foreground: 15 23 42;
+    --accent: 60 207 142;
+    --accent-foreground: 15 23 42;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 217 211 204;
+    --input: 217 211 204;
+    --ring: 60 207 142;
+    --radius: 20px;
+  }
 }
 
-/* TailwindCSS v4 theme configuration */
-@theme {
-  --color-cream: #F5EFE7;
-  --color-ink: #0F172A;
-  --color-stone: #D9D3CC;
-  --color-espresso: #2B1E16;
-  --color-accent: #3ECF8E;
-  --color-accent-alt: #7C3AED;
-  --color-background: #F5EFE7;
-  --color-foreground: #0F172A;
-  --color-input: #D9D3CC;
-  --color-ring: #3ECF8E;
-  --color-border: #D9D3CC;
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   
-  /* shadcn/ui compatibility */
-  --color-primary: #3ECF8E;
-  --color-primary-foreground: #ffffff;
-  --color-secondary: #D9D3CC;
-  --color-secondary-foreground: #0F172A;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #ffffff;
-  --color-accent-foreground: #0F172A;
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: #F5EFE7;
+    color: #0F172A;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* Two Space Custom Components */
+  .gradient-bg {
+    background: linear-gradient(135deg, #F5EFE7 0%, #E8DFD6 100%);
+  }
   
-  /* Custom utilities */
-  --border-radius-xl: 20px;
-  --box-shadow-soft: 0 6px 20px rgba(10,10,10,.06);
+  .gradient-accent {
+    background: linear-gradient(135deg, #3ECF8E 0%, #2BB879 100%);
+  }
   
-  /* Typography */
-  --font-heading: var(--font-heading);
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-soft;
+  }
+  
+  .btn-primary {
+    @apply bg-accent hover:bg-accent/90 text-white font-medium px-6 py-3 rounded-xl shadow-card hover:shadow-hover transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-stone text-ink font-medium px-6 py-3 rounded-xl border border-stone shadow-card hover:shadow-hover transition-all duration-200;
+  }
 }
 
 /* Custom utility classes */
