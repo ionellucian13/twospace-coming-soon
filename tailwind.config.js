@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        // Two Space Brand Palette
+        cream: 'var(--color-cream)',
+        ink: 'var(--color-ink)', 
+        stone: 'var(--color-stone)',
+        espresso: 'var(--color-espresso)',
+        accent: 'var(--color-accent)',
+        'accent-alt': 'var(--color-accent-alt)',
+      },
       borderRadius: {
         'xl': 'var(--radius)',
       },

@@ -1,14 +1,12 @@
-@import "tailwindcss";
-
-@plugin "tailwindcss-animate";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Inter font is loaded via next/font in layout.tsx */
 
-/* Design Tokens - Tailwind v4 style */
-@theme {
+/* Two Space Design Tokens */
+:root {
+  /* Brand Colors */
   --color-bg: #F5EFE7;
   --color-ink: #0F172A;
   --color-stone: #D9D3CC;
@@ -16,10 +14,10 @@
   --color-accent: #3ECF8E;
   --color-accent-alt: #7C3AED;
   --color-cream: #F5EFE7;
+  
+  /* Design System */
   --radius: 20px;
   --shadow: 0 6px 20px rgba(10,10,10,.06);
-  --font-inter: var(--font-inter);
-  --font-heading: var(--font-heading);
 }
 
 /* Base styles */
