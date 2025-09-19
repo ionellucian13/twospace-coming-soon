@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/button'
-import { Sparkles } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,12 +19,10 @@ export default function Navbar() {
   }, [])
 
   const navigation = [
-    { name: 'Home', href: '/' },
     { name: 'Marketing', href: '/marketing' },
     { name: 'Pachete', href: '/packages' },
     { name: 'Cazuri', href: '/cases' },
     { name: 'Cafe', href: '/cafe' },
-    { name: 'Contact', href: '/contact' },
   ]
 
   return (
@@ -85,38 +82,30 @@ export default function Navbar() {
               </motion.div>
             ))}
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-              className="ml-6"
-            >
-              <Link href="/contact">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-primary px-6 py-2.5 text-sm font-semibold rounded-xl"
-                >
-                  🚀 Start Project
-                </motion.div>
-              </Link>
-            </motion.div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-3">
             <Link href="/contact">
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white px-6 py-2 rounded-xl transition-all duration-300">
-                  <Sparkles className="mr-2 h-4 w-4" />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent hover:text-white px-5 py-2 rounded-xl transition-all duration-300 font-medium">
                   Contact
                 </Button>
-              </Link>
-              <Link href="/contact">
-                <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-xl shadow-hover">
-                  Start a Project
+              </motion.div>
+            </Link>
+            <Link href="/contact">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-xl shadow-hover font-medium">
+                  🚀 Start Project
                 </Button>
-              </Link>
+              </motion.div>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -150,14 +139,18 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-                <Button 
-                  asChild 
-                  className="bg-accent hover:bg-accent/90 text-white font-medium w-full mt-4"
-                >
+                <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-stone/20">
                   <Link href="/contact">
-                    Start a Project
+                    <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent hover:text-white w-full font-medium">
+                      Contact
+                    </Button>
                   </Link>
-                </Button>
+                  <Link href="/contact">
+                    <Button className="bg-accent hover:bg-accent/90 text-white w-full font-medium">
+                      🚀 Start Project
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
