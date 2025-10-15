@@ -68,7 +68,7 @@ export default function ComingSoon() {
   }
 
   return (
-    <main className="h-screen bg-chalk flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative overflow-hidden">
+    <main className="min-h-screen bg-chalk flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative overflow-x-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
         <div className="absolute top-0 left-0 w-full h-full" 
@@ -123,12 +123,12 @@ export default function ComingSoon() {
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-10 sm:mb-12 lg:mb-16 px-4"
+          className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-8 sm:mb-10 px-4"
         >
           Coming soon.
         </motion.p>
 
-        {/* Scroll Indicator - Positioned at Bottom of Viewport */}
+        {/* Scroll Indicator - Below Coming Soon */}
         <motion.div
           initial={mounted ? { opacity: 0, y: -10 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
@@ -139,7 +139,7 @@ export default function ComingSoon() {
             repeatType: "reverse",
             repeatDelay: 0.5
           }}
-          className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2 mb-12 sm:mb-16 lg:mb-20"
         >
           <p className="text-xs sm:text-sm text-grey-space/40 font-manrope">Scroll to explore</p>
           <motion.div
