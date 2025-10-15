@@ -99,9 +99,9 @@ export default function ComingSoon() {
             style={{ 
               width: '100%', 
               height: 'auto', 
-              maxWidth: '200px'
+              maxWidth: '400px'
             }}
-            className="w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]"
+            className="w-full max-w-[200px] sm:max-w-[240px] md:max-w-[300px] lg:max-w-[340px] xl:max-w-[400px]"
           />
         </motion.div>
 
