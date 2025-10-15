@@ -155,11 +155,7 @@ export default function ComingSoon() {
               <motion.button
                 type="submit"
                 disabled={status === 'loading'}
-                whileTap={status !== 'loading' ? { scale: 0.95 } : {}}
-                transition={{ 
-                  duration: 0.1
-                }}
-                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 px-4 sm:px-6 py-2 sm:py-2.5 bg-blood-orange text-white rounded-full font-semibold font-space-grotesk flex items-center gap-1.5 sm:gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px]"
+                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 px-4 sm:px-6 py-2 sm:py-2.5 bg-blood-orange text-white rounded-full font-semibold font-space-grotesk flex items-center gap-1.5 sm:gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px] active:opacity-90 transition-opacity duration-100"
                 aria-label="Subscribe to newsletter"
               >
                 {status === 'loading' ? (
