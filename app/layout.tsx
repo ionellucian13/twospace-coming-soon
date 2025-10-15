@@ -29,7 +29,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://twospace.com'),
+  metadataBase: new URL('https://twospace.ro'),
   title: {
     default: 'Two Space - Where Coffee Meets Strategy | Coming Soon',
     template: '%s | Two Space'
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     'two space',
     'coming soon'
   ],
-  authors: [{ name: 'Two Space', url: 'https://twospace.com' }],
+  authors: [{ name: 'Two Space', url: 'https://twospace.ro' }],
   creator: 'Two Space',
   publisher: 'Two Space',
   formatDetection: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://twospace.com',
+    url: 'https://twospace.ro',
     siteName: 'Two Space',
     title: 'Two Space - Where Coffee Meets Strategy',
     description: 'Professional marketing services meet inspiring coffee space. Subscribe for launch updates.',
@@ -93,11 +93,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-search-console-verification-code',
-    yandex: 'your-yandex-verification-code',
+    google: 'oAG_lJneIqFMMtFYUm4X9ipXFu8gVdlWmc4bPOv6oO8',
   },
   alternates: {
-    canonical: 'https://twospace.com',
+    canonical: 'https://twospace.ro',
   },
   category: 'business',
 }
@@ -110,7 +109,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${heading.variable} ${spaceGrotesk.variable} ${manrope.variable}`}>
       <head>
-        <link rel="canonical" href="https://twospace.com" />
+        <link rel="canonical" href="https://twospace.ro" />
         <meta name="theme-color" content="#FF491F" />
         <script
           type="application/ld+json"
@@ -119,8 +118,8 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Two Space',
-              url: 'https://twospace.com',
-              logo: 'https://twospace.com/two-space-logo.svg',
+              url: 'https://twospace.ro',
+              logo: 'https://twospace.ro/two-space-logo.svg',
               description: 'Professional marketing services combined with an inspiring coffee space',
               foundingDate: '2025',
               sameAs: [
@@ -144,7 +143,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Two Space',
-              url: 'https://twospace.com',
+              url: 'https://twospace.ro',
               description: 'Where Coffee Meets Strategy - Coming Soon'
             })
           }}
