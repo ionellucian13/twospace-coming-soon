@@ -10,7 +10,7 @@ const StarIcon = () => (
   <div className="group-hover:scale-110 transition-transform duration-300">
     <Image
       src="/star-icon.svg"
-      alt="Star icon"
+      alt="Two Space brand star - Blood Orange accent icon"
       width={31}
       height={31}
       className="w-[31px] h-[31px]"
@@ -45,6 +45,12 @@ export default function ComingSoon() {
         setStatus('success')
         setMessage("Successfully subscribed! We'll notify you when we launch.")
         setEmail('')
+        
+        // Track newsletter signup event (Vercel Analytics)
+        if (typeof window !== 'undefined' && (window as any).va) {
+          (window as any).va('track', 'Newsletter Signup', { email: email.split('@')[1] })
+        }
+        
         setTimeout(() => {
           setStatus('idle')
           setMessage('')
@@ -91,7 +97,7 @@ export default function ComingSoon() {
         >
           <Image
             src="/two-space-logo.svg"
-            alt="Two Space"
+            alt="Two Space Logo - Where Coffee Meets Strategy - Blood Orange Brand Identity"
             width={161}
             height={161}
             priority
@@ -105,7 +111,7 @@ export default function ComingSoon() {
           />
         </motion.div>
 
-        {/* Main Heading - Impactful Title */}
+        {/* Main Heading - SEO Optimized H1 */}
         <motion.h1
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
@@ -248,9 +254,9 @@ export default function ComingSoon() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto px-4"
         >
           {[
-            { label: 'A Space for Connection', description: 'Energy that inspires ideas' },
-            { label: 'A Space for Creation', description: 'Energy that builds vision' },
-            { label: 'Two Sides. One Place.', description: 'Where ideas take shape' },
+            { label: 'A Space for Connection', description: 'Energy that inspires ideas', heading: 'Marketing & Networking Community' },
+            { label: 'A Space for Creation', description: 'Energy that builds vision', heading: 'Creative Workspace & Strategy' },
+            { label: 'Two Sides. One Place.', description: 'Where ideas take shape', heading: 'Coffee Shop Meets Marketing Agency' },
           ].map((item, index) => (
             <motion.div
               key={item.label}
@@ -261,8 +267,8 @@ export default function ComingSoon() {
             >
               <StarIcon />
               <div className="text-center">
-                <span className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope block">{item.label}</span>
-                <span className="text-xs text-grey-space/50 font-manrope mt-1 block">{item.description}</span>
+                <h2 className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope block">{item.label}</h2>
+                <p className="text-xs text-grey-space/50 font-manrope mt-1 block">{item.description}</p>
               </div>
             </motion.div>
           ))}

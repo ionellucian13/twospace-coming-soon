@@ -29,28 +29,77 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Two Space - Marketing & Coffee Hub',
-  description: 'We brew ideas that sell. Branding, lansare, growth. Coffee for minds at work.',
-  keywords: ['marketing', 'branding', 'coffee', 'hub', 'two space'],
-  authors: [{ name: 'Two Space' }],
+  metadataBase: new URL('https://twospace.com'),
+  title: {
+    default: 'Two Space - Where Coffee Meets Strategy | Coming Soon',
+    template: '%s | Two Space'
+  },
+  description: 'Two Space combines professional marketing services with an inspiring coffee space. Join our community where creativity meets strategy. Launching soon - subscribe for updates.',
+  keywords: [
+    'marketing agency',
+    'branding services',
+    'coffee shop',
+    'creative workspace',
+    'marketing strategy',
+    'brand development',
+    'coffee and marketing',
+    'entrepreneur community',
+    'business strategy',
+    'creative agency',
+    'two space',
+    'coming soon'
+  ],
+  authors: [{ name: 'Two Space', url: 'https://twospace.com' }],
   creator: 'Two Space',
+  publisher: 'Two Space',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: 'website',
-    locale: 'ro_RO',
+    locale: 'en_US',
     url: 'https://twospace.com',
     siteName: 'Two Space',
-    title: 'Two Space - Marketing & Coffee Hub',
-    description: 'We brew ideas that sell. Coffee for minds at work.',
+    title: 'Two Space - Where Coffee Meets Strategy',
+    description: 'Professional marketing services meet inspiring coffee space. Subscribe for launch updates.',
+    images: [
+      {
+        url: '/two-space-og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Two Space - Where Coffee Meets Strategy - Professional Marketing & Inspiring Coffee Space',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Two Space - Marketing & Coffee Hub',
-    description: 'We brew ideas that sell. Coffee for minds at work.',
+    title: 'Two Space - Where Coffee Meets Strategy',
+    description: 'Professional marketing services meet inspiring coffee space. Subscribe for launch updates.',
+    images: ['/two-space-og-image.png'],
+    creator: '@twospace',
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  verification: {
+    google: 'your-google-search-console-verification-code',
+    yandex: 'your-yandex-verification-code',
+  },
+  alternates: {
+    canonical: 'https://twospace.com',
+  },
+  category: 'business',
 }
 
 export default function RootLayout({
@@ -59,7 +108,48 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ro" className={`${inter.variable} ${heading.variable} ${spaceGrotesk.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${inter.variable} ${heading.variable} ${spaceGrotesk.variable} ${manrope.variable}`}>
+      <head>
+        <link rel="canonical" href="https://twospace.com" />
+        <meta name="theme-color" content="#FF491F" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Two Space',
+              url: 'https://twospace.com',
+              logo: 'https://twospace.com/two-space-logo.svg',
+              description: 'Professional marketing services combined with an inspiring coffee space',
+              foundingDate: '2025',
+              sameAs: [
+                'https://facebook.com/twospace',
+                'https://instagram.com/twospace',
+                'https://twitter.com/twospace',
+                'https://linkedin.com/company/twospace'
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'Customer Service',
+                availableLanguage: ['English', 'Romanian']
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Two Space',
+              url: 'https://twospace.com',
+              description: 'Where Coffee Meets Strategy - Coming Soon'
+            })
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         <Analytics />
