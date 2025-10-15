@@ -92,29 +92,29 @@ export default function ComingSoon() {
           />
         </motion.div>
 
-        {/* Main Heading - Responsive typography with optimal line height */}
+        {/* Main Heading - Duo Space concept */}
         <motion.h1
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-space-grotesk font-bold text-grey-space mb-4 sm:mb-6 leading-tight px-4"
         >
-          Ceva{' '}
+          Două Spații.{' '}
           <span className="text-blood-orange italic">
-            Extraordinar
+            O Singură
           </span>
           <br />
-          Se Pregătește
+          Experiență.
         </motion.h1>
 
-        {/* Subtitle - Optimal reading width and spacing */}
+        {/* Subtitle - Brand concept explained */}
         <motion.p
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-base sm:text-lg md:text-xl text-grey-space/70 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-manrope px-4"
         >
-          O experiență unică unde marketingul premium întâlnește cultura cafelei de specialitate.
+          Un <span className="font-semibold text-grey-space">café</span> care inspiră conexiuni și creativitate. O <span className="font-semibold text-grey-space">agenție</span> care transformă idei în strategie.
           <span className="block mt-2 text-blood-orange font-semibold">Lansare în curând.</span>
         </motion.p>
 
@@ -139,7 +139,7 @@ export default function ComingSoon() {
                 placeholder="Adresa ta de email"
                 required
                 disabled={status === 'loading'}
-                aria-label="Email address for newsletter"
+                aria-label="Adresa de email pentru newsletter"
                 className="w-full pl-12 sm:pl-14 pr-32 sm:pr-40 py-3.5 sm:py-4 bg-white border-2 border-grey-space/10 rounded-full text-grey-space placeholder:text-grey-space/40 focus:outline-none focus:border-blood-orange focus:ring-4 focus:ring-blood-orange/20 transition-all duration-300 font-manrope text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <motion.button
@@ -148,7 +148,7 @@ export default function ComingSoon() {
                 whileHover={status !== 'loading' ? { scale: 1.05, x: 2 } : {}}
                 whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
                 className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 px-4 sm:px-6 py-2 sm:py-2.5 bg-blood-orange text-white rounded-full font-semibold font-space-grotesk hover:bg-blood-orange/90 transition-all duration-300 flex items-center gap-1.5 sm:gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px]"
-                aria-label="Subscribe to newsletter"
+                aria-label="Abonează-te la newsletter"
               >
                 {status === 'loading' ? (
                   <span className="flex items-center gap-2">
@@ -192,7 +192,7 @@ export default function ComingSoon() {
           )}
         </motion.div>
 
-        {/* Features Grid - Responsive with optimal touch targets */}
+        {/* Features Grid - Duo Space concept */}
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
@@ -200,9 +200,9 @@ export default function ComingSoon() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto px-4"
         >
           {[
-            { label: 'Marketing Premium', icon: Sparkle },
-            { label: 'Coffee Experience', icon: Coffee },
-            { label: 'Un Singur Loc', icon: ArrowRight },
+            { label: 'Spațiu pentru Conexiuni', icon: Coffee, description: 'Energie care inspiră idei' },
+            { label: 'Spațiu pentru Creație', icon: Sparkle, description: 'Energie care construiește viziune' },
+            { label: 'Două Fețe. Un Loc.', icon: ArrowRight, description: 'Unde ideile prind formă' },
           ].map((item, index) => (
             <motion.div
               key={item.label}
@@ -212,19 +212,22 @@ export default function ComingSoon() {
               className="flex flex-col items-center gap-3 sm:gap-4 p-6 sm:p-8 bg-white rounded-2xl sm:rounded-3xl border-2 border-grey-space/10 hover:border-blood-orange/30 hover:shadow-lg transition-all duration-300 group min-h-[120px] sm:min-h-[140px]"
             >
               <item.icon size={40} weight="duotone" className="text-blood-orange group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope text-center">{item.label}</span>
+              <div className="text-center">
+                <span className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope block">{item.label}</span>
+                <span className="text-xs text-grey-space/50 font-manrope mt-1 block">{item.description}</span>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Footer Text - Optimal spacing */}
+        {/* Footer Text - Updated to 2025 */}
         <motion.p
           initial={mounted ? { opacity: 0 } : false}
           animate={mounted ? { opacity: 1 } : false}
           transition={{ duration: 0.8, delay: 1.3 }}
           className="mt-12 sm:mt-16 lg:mt-20 text-xs sm:text-sm text-grey-space/50 font-manrope px-4"
         >
-          © 2024 Two Space. Unde creativitatea întâlnește cafeaua.
+          © 2025 Two Space. Unde creativitatea întâlnește strategia.
         </motion.p>
       </div>
     </main>
