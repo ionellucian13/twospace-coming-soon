@@ -1,0 +1,50 @@
+13:22:05.415 Running build in Washington, D.C., USA (East) – iad1
+13:22:05.415 Build machine configuration: 2 cores, 8 GB
+13:22:05.430 Cloning github.com/ionellucian13/twospace-coming-soon (Branch: main, Commit: e37b8ff)
+13:22:05.626 Previous build caches not available
+13:22:05.753 Cloning completed: 323.000ms
+13:22:06.109 Running "vercel build"
+13:22:06.498 Vercel CLI 48.2.9
+13:22:06.816 Installing dependencies...
+13:22:19.793 
+13:22:19.793 added 208 packages in 13s
+13:22:19.794 
+13:22:19.794 43 packages are looking for funding
+13:22:19.794   run `npm fund` for details
+13:22:19.834 Detected Next.js version: 15.5.3
+13:22:19.838 Running "npm run build"
+13:22:19.948 
+13:22:19.949 > workspace@1.0.0 build
+13:22:19.949 > next build
+13:22:19.949 
+13:22:20.527 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+13:22:20.528 This information is used to shape Next.js' roadmap and prioritize features.
+13:22:20.528 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+13:22:20.529 https://nextjs.org/telemetry
+13:22:20.529 
+13:22:20.587    ▲ Next.js 15.5.3
+13:22:20.587 
+13:22:20.657    Creating an optimized production build ...
+13:22:41.686 
+13:22:41.686 
+13:22:41.687 Retrying 1/3...
+13:22:41.687 
+13:22:41.688 
+13:22:41.688 Retrying 1/3...
+13:22:41.689 
+13:22:41.689 
+13:22:41.689 Retrying 1/3...
+13:22:41.690 
+13:22:41.690 
+13:22:41.690 Retrying 1/3...
+13:22:57.045  ✓ Compiled successfully in 33.8s
+13:22:57.050    Linting and checking validity of types ...
+13:23:03.704 Failed to compile.
+13:23:03.704 
+13:23:03.705 app/cases/[slug]/page.tsx
+13:23:03.705 Type error: Type 'CaseDetailPageProps' does not satisfy the constraint 'PageProps'.
+13:23:03.705   Types of property 'params' are incompatible.
+13:23:03.705     Type '{ slug: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+13:23:03.705 
+13:23:03.729 Next.js build worker exited with code: 1 and signal: null
+13:23:03.748 Error: Command "npm run build" exited with 1
