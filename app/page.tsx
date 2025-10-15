@@ -77,19 +77,18 @@ export default function ComingSoon() {
           className="mb-8 sm:mb-12 lg:mb-16 flex justify-center px-4"
         >
           <Image
-            src="/two-space-logo.svg"
+            src="/two-space-logo.png"
             alt="Two Space - Things Work Out"
             width={1200}
             height={400}
             priority
-            unoptimized={true}
+            quality={100}
             style={{ 
               width: '100%', 
               height: 'auto', 
-              maxWidth: '600px',
-              imageRendering: 'crisp-edges'
+              maxWidth: '600px'
             }}
-            className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] antialiased"
+            className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
           />
         </motion.div>
 
