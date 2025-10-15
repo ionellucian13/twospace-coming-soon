@@ -83,7 +83,8 @@ Note: The application is designed to be database-ready, with structured TypeScri
 **Content Update - English Language:**
 - ✅ Converted all content to English version
 - ✅ Impactful headline: "Where Coffee Meets Strategy"
-- ✅ Simplified layout: Large title → Newsletter bar → 3 sneak peek cards
+- ✅ Coming soon text: "Launching soon." in Blood Orange
+- ✅ Simplified layout: Large title → Coming soon text → Newsletter bar → 3 sneak peek cards
 - ✅ Feature cards:
   - "A Space for Connection" - Energy that inspires ideas
   - "A Space for Creation" - Energy that builds vision

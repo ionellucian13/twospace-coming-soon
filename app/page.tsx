@@ -110,13 +110,23 @@ export default function ComingSoon() {
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-space-grotesk font-bold text-grey-space mb-12 sm:mb-16 lg:mb-20 leading-tight px-4"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-space-grotesk font-bold text-grey-space mb-6 sm:mb-8 leading-tight px-4"
         >
           Where Coffee Meets{' '}
           <span className="text-blood-orange italic">
             Strategy
           </span>
         </motion.h1>
+
+        {/* Coming Soon Text */}
+        <motion.p
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-12 sm:mb-16 lg:mb-20 px-4"
+        >
+          Launching soon.
+        </motion.p>
 
         {/* Email Signup Form - Enhanced UX with feedback */}
         <motion.div
