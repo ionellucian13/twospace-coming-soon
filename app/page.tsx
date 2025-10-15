@@ -82,7 +82,6 @@ export default function ComingSoon() {
             width={1200}
             height={400}
             priority
-            quality={100}
             unoptimized={true}
             style={{ 
               width: '100%', 
