@@ -123,7 +123,7 @@ export default function ComingSoon() {
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-4 sm:mb-6 px-4"
+          className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-3 sm:mb-4 px-4"
         >
           Coming soon.
         </motion.p>
@@ -139,7 +139,7 @@ export default function ComingSoon() {
             repeatType: "reverse",
             repeatDelay: 0.5
           }}
-          className="flex flex-col items-center gap-2 mb-8 sm:mb-12 lg:mb-16"
+          className="flex flex-col items-center gap-2 mb-6 sm:mb-8 lg:mb-12"
         >
           <p className="text-xs sm:text-sm text-grey-space/40 font-manrope">Scroll to explore</p>
           <motion.div
