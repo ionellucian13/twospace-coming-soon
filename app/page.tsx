@@ -90,10 +90,10 @@ export default function ComingSoon() {
           className="mb-8 sm:mb-12 lg:mb-16 flex justify-center px-4"
         >
           <Image
-            src="/two-space-logo.png"
+            src="/two-space-logo.svg"
             alt="Two Space - Things Work Out"
-            width={1200}
-            height={400}
+            width={359}
+            height={179}
             priority
             quality={100}
             style={{ 
