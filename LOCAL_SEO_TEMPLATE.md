@@ -20,9 +20,9 @@ Add this script to the `<head>` section (after the existing Organization schema)
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       name: 'Two Space',
-      image: 'https://twospace.com/two-space-logo.svg',
-      '@id': 'https://twospace.com',
-      url: 'https://twospace.com',
+      image: 'https://twospace.ro/two-space-logo.svg',
+      '@id': 'https://twospace.ro',
+      url: 'https://twospace.ro',
       telephone: '+1-555-123-4567', // UPDATE THIS
       priceRange: '$$',
       address: {
@@ -98,7 +98,7 @@ Google will send verification via:
 - ✅ Category: Marketing Agency, Coffee Shop
 - ✅ Address: [Your physical address]
 - ✅ Phone: [Your phone number]
-- ✅ Website: https://twospace.com
+- ✅ Website: https://twospace.ro
 - ✅ Hours: [Your business hours]
 
 **Additional Information:**
@@ -169,7 +169,7 @@ Two Space
 123 Main Street
 Your City, CA 12345
 +1-555-123-4567
-https://twospace.com
+https://twospace.ro
 ```
 
 **Where to Check:**
@@ -212,7 +212,7 @@ When you create a location page:
 
 ### URL Structure
 ```
-https://twospace.com/location
+https://twospace.ro/location
 ```
 
 ### Content to Include:
@@ -235,7 +235,7 @@ Sunday: Closed
 
 ### Contact
 Phone: (555) 123-4567
-Email: hello@twospace.com
+Email: hello@twospace.ro
 
 ### What We Offer
 - Specialty Coffee & Beverages

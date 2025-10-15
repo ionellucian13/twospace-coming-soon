@@ -12,7 +12,7 @@ Your Coming Soon page is now **fully optimized for Google Search** and social me
 - **Title**: "Two Space - Where Coffee Meets Strategy | Coming Soon"
 - **Description**: Compelling 160-character description for search results
 - **Keywords**: 12 targeted keywords (marketing agency, branding services, coffee shop, etc.)
-- **Canonical URL**: https://twospace.com
+- **Canonical URL**: https://twospace.ro
 - **Language**: English (en)
 - **Theme Color**: Blood Orange (#FF491F)
 
@@ -62,7 +62,7 @@ Your Coming Soon page is now **fully optimized for Google Search** and social me
 ### Step 1: Verify Ownership
 
 1. **Visit**: [Google Search Console](https://search.google.com/search-console)
-2. **Add Property**: Enter `https://twospace.com`
+2. **Add Property**: Enter `https://twospace.ro`
 3. **Verification Method**: Choose one:
    - **HTML Meta Tag**: Add to `<head>` (already prepared in layout.tsx - update `verification.google` value)
    - **Domain DNS**: Add TXT record to your domain
@@ -71,7 +71,7 @@ Your Coming Soon page is now **fully optimized for Google Search** and social me
 ### Step 2: Submit Sitemap
 
 1. Go to **Sitemaps** in left sidebar
-2. Enter sitemap URL: `https://twospace.com/sitemap.xml`
+2. Enter sitemap URL: `https://twospace.ro/sitemap.xml`
 3. Click **Submit**
 4. Google will start crawling within 24-48 hours
 
@@ -193,7 +193,7 @@ Add to `layout.tsx` when you have address:
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Two Space",
-  "image": "https://twospace.com/two-space-logo.svg",
+  "image": "https://twospace.ro/two-space-logo.svg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Main Street",
@@ -277,7 +277,7 @@ Before going live, verify:
 ## 🚀 Next Steps After Deployment
 
 1. **Deploy to production** (Replit/Vercel)
-2. **Get custom domain** (twospace.com)
+2. **Get custom domain** (twospace.ro)
 3. **Verify in Google Search Console**
 4. **Submit sitemap**
 5. **Monitor for 7-14 days**

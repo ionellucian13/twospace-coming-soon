@@ -43,7 +43,7 @@ After deployment:
 
 1. Go to **Deployments → Settings → Domain**
 2. Click **"Link a domain"** or **"Connect from another registrar"**
-3. Enter your domain name (e.g., `twospace.com`)
+3. Enter your domain name (e.g., `twospace.ro`)
 4. Add the provided **DNS records** to your domain registrar:
    - **A Record**: Points to Replit IP
    - **TXT Record**: For domain verification

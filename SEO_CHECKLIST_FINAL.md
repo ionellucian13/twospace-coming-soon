@@ -15,7 +15,7 @@
 - [ ] Update LinkedIn URL (currently: `https://linkedin.com/company/twospace`)
 
 #### 3. Domain Configuration
-- [ ] Ensure `https://twospace.com` is your actual domain (update in `app/layout.tsx` if different)
+- [ ] Ensure `https://twospace.ro` is your actual domain (update in `app/layout.tsx` if different)
 - [ ] Set up SSL certificate for HTTPS
 - [ ] Configure DNS properly
 
@@ -84,9 +84,9 @@
 
 #### Day 1:
 1. **Google Search Console**
-   - [ ] Add property: https://twospace.com
+   - [ ] Add property: https://twospace.ro
    - [ ] Verify ownership (HTML meta tag already in layout.tsx)
-   - [ ] Submit sitemap: https://twospace.com/sitemap.xml
+   - [ ] Submit sitemap: https://twospace.ro/sitemap.xml
 
 2. **Bing Webmaster Tools**
    - [ ] Create account at https://www.bing.com/webmasters
@@ -111,7 +111,7 @@
 
 #### Day 4-7:
 6. **Monitor Indexing**
-   - [ ] Check if site appears in Google (search: `site:twospace.com`)
+   - [ ] Check if site appears in Google (search: `site:twospace.ro`)
    - [ ] Monitor Coverage report in Search Console
    - [ ] Check for any indexing errors
 
@@ -188,7 +188,7 @@
 ### Minor TODOs (Before Launch):
 - ⚠️ Update verification codes with real values
 - ⚠️ Confirm social media URLs are correct
-- ⚠️ Verify domain is twospace.com (or update)
+- ⚠️ Verify domain is twospace.ro (or update)
 
 ---
 
@@ -196,10 +196,10 @@
 
 ### Important URLs After Deployment:
 ```
-Sitemap: https://twospace.com/sitemap.xml
-Robots: https://twospace.com/robots.txt
-Manifest: https://twospace.com/manifest.json
-OG Image: https://twospace.com/opengraph-image
+Sitemap: https://twospace.ro/sitemap.xml
+Robots: https://twospace.ro/robots.txt
+Manifest: https://twospace.ro/manifest.json
+OG Image: https://twospace.ro/opengraph-image
 ```
 
 ### File Locations:
