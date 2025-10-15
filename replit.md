@@ -78,6 +78,26 @@ Note: The application is designed to be database-ready, with structured TypeScri
 
 ## Recent Changes
 
+### October 15, 2025 - Coming Soon Page Created & Activated
+
+**Coming Soon Homepage Implementation:**
+- ✅ Created premium Coming Soon page with Phosphor Icons (duotone) integration
+- ✅ Installed @phosphor-icons/react package for modern icon system
+- ✅ Implemented animated gradient text with "Something Extraordinary Is Brewing" heading
+- ✅ Added email signup form with Framer Motion micro-interactions
+- ✅ Created 3 feature cards: Marketing Premium, Coffee Experience, Un Singur Loc
+- ✅ Deployed as main homepage (original homepage backed up to app/page.main.backup.tsx)
+- ✅ Ready for domain connection - visitors will see Coming Soon page
+
+**Technical Implementation:**
+- Custom gradient animation (@keyframes) added to globals.css
+- Responsive design with backdrop-blur glass effects
+- Background decorative elements with animated blur orbs
+- Email form with submit state management and visual feedback
+- Full Romanian language content for target audience
+
+**Status: Coming Soon page is LIVE as homepage, ready for domain deployment.**
+
 ### September 19, 2025 - Stilizare Completă Finalizată
 
 **TailwindCSS v4 Integration Complete:**
