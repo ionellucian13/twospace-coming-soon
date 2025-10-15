@@ -17,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://twospace.ro/sitemap.xml',
+    sitemap: 'https://twospace.com/sitemap.xml',
   }
 }
