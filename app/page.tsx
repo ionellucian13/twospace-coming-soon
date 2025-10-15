@@ -125,7 +125,7 @@ export default function ComingSoon() {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-lg sm:text-xl md:text-2xl text-blood-orange font-semibold font-manrope mb-12 sm:mb-16 lg:mb-20 px-4"
         >
-          Launching soon.
+          Coming soon.
         </motion.p>
 
         {/* Email Signup Form - Enhanced UX with feedback */}
