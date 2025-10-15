@@ -5,17 +5,17 @@ import { ArrowRight, EnvelopeSimple, CheckCircle, XCircle } from '@phosphor-icon
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-// Diamond Icon Component - Brand Guide
-const DiamondIcon = () => (
-  <div 
-    className="group-hover:scale-110 transition-transform duration-300"
-    style={{
-      width: '21.59px',
-      height: '21.59px',
-      background: '#FF491F',
-      transform: 'rotate(-45deg)',
-    }}
-  />
+// Star Icon Component - Brand Guide
+const StarIcon = () => (
+  <div className="group-hover:scale-110 transition-transform duration-300">
+    <Image
+      src="/star-icon.svg"
+      alt="Star icon"
+      width={31}
+      height={31}
+      className="w-[31px] h-[31px]"
+    />
+  </div>
 )
 
 export default function ComingSoon() {
@@ -224,7 +224,7 @@ export default function ComingSoon() {
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className="flex flex-col items-center gap-3 sm:gap-4 p-6 sm:p-8 bg-white rounded-2xl sm:rounded-3xl border-2 border-grey-space/10 hover:border-blood-orange/30 hover:shadow-lg transition-all duration-300 group min-h-[120px] sm:min-h-[140px]"
             >
-              <DiamondIcon />
+              <StarIcon />
               <div className="text-center">
                 <span className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope block">{item.label}</span>
                 <span className="text-xs text-grey-space/50 font-manrope mt-1 block">{item.description}</span>
