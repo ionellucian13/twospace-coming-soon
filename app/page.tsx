@@ -91,17 +91,17 @@ export default function ComingSoon() {
         >
           <Image
             src="/two-space-logo.svg"
-            alt="Two Space - Things Work Out"
-            width={359}
+            alt="Two Space"
+            width={179}
             height={179}
             priority
             quality={100}
             style={{ 
               width: '100%', 
               height: 'auto', 
-              maxWidth: '600px'
+              maxWidth: '300px'
             }}
-            className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
+            className="w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px]"
           />
         </motion.div>
 
