@@ -200,6 +200,46 @@ export default function ComingSoon() {
           )}
         </motion.div>
 
+        {/* Scroll Indicator - Subtle hint for more content */}
+        <motion.div
+          initial={mounted ? { opacity: 0, y: -10 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
+          transition={{ 
+            duration: 0.8, 
+            delay: 0.8,
+            repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 0.5
+          }}
+          className="flex flex-col items-center gap-2 mt-8 sm:mt-12 mb-4 sm:mb-8"
+        >
+          <p className="text-xs sm:text-sm text-grey-space/40 font-manrope">Scroll to explore</p>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ 
+              duration: 1.5, 
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              className="text-blood-orange"
+            >
+              <path 
+                d="M7 10L12 15L17 10" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+        </motion.div>
+
         {/* Features Grid - Sneak Peek Cards */}
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}

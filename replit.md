@@ -154,9 +154,10 @@ Note: The application is designed to be database-ready, with structured TypeScri
 **UX/UI Enhancements:**
 - ✅ Touch Targets: Minimum 44x44px for mobile (iOS/Android standard)
 - ✅ Focus States: 4px ring blood-orange for keyboard navigation
-- ✅ Visual Hierarchy: Logo → Heading → CTA → Features progression
-- ✅ Micro-interactions: Hover scale effects, smooth transitions
-- ✅ Error Handling: Clear Romanian messages for all error cases
+- ✅ Visual Hierarchy: Logo → Heading → CTA → Scroll Indicator → Features progression
+- ✅ Scroll Indicator: Animated "Scroll to explore" with bouncing arrow in Blood Orange
+- ✅ Micro-interactions: Hover scale effects, smooth transitions, bounce animations
+- ✅ Error Handling: Clear messages for all error cases
 - ✅ Auto-dismiss: Status messages disappear after 4-5 seconds
 
 **Technical Implementation:**
