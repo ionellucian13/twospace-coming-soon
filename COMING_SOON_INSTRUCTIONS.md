@@ -1,15 +1,31 @@
 # 🚀 Two Space - Coming Soon Page Instructions
 
-## Pagina Coming Soon este ACTIVĂ
+## Pagina Coming Soon este ACTIVĂ cu Brand Guide Oficial
 
-Pagina Coming Soon este acum **homepage-ul principal** al aplicației și va apărea când vizitatorii accesează domeniul tău.
+Pagina Coming Soon este acum **homepage-ul principal** al aplicației, stilizată EXACT după brand guide-ul oficial Two Space.
+
+### 🎨 Design Two Space Brand (Implementat):
+
+**Culori Oficiale:**
+- **Blood Orange (#FF491F)** - Culoare primară vibrantă
+- **Grey Space (#2B2B2B)** - Gri închis, aproape negru
+- **Chalk (#F5F5F5)** - Gri deschis pentru background
+- **Cream Brand (#F2F6D0)** - Accent galben-verde deschis
+
+**Fonturi Oficiale:**
+- **Space Grotesk** - Font principal pentru headings
+- **Manrope** - Font secundar pentru body text și UI
+
+**Logo Design (Din Brand Guide):**
+- Cerc Orange cu "two SPACE" în Grey Space
+- Cerc Grey cu "THINGS WORK OUT." în Chalk
 
 ### ✨ Ce include pagina:
 
-- **Logo Two Space** cu iconuri premium Phosphor (duotone)
-- **Heading animat** cu gradient text "Something Extraordinary Is Brewing"
-- **Descriere** în română despre experiența unică Two Space
-- **Formular email signup** pentru notificări la lansare
+- **Logo cercuri Two Space** exact ca în brand guide oficial
+- **Heading animat** "Ceva Extraordinar Se Pregătește" cu "Extraordinar" în italic orange
+- **Descriere** în română cu fontul Manrope
+- **Formular email signup** cu focus state blood-orange
 - **3 carduri features**: Marketing Premium, Coffee Experience, Un Singur Loc
 - **Animații premium** cu Framer Motion (fade-in, stagger effects)
 - **Design responsive** optimizat pentru toate device-urile
@@ -36,10 +52,21 @@ Când ești gata să lansezi site-ul complet Two Space:
 
 Pentru a modifica conținutul paginii Coming Soon, editează `app/page.tsx`:
 
-- **Textul heading**: Linia 58-63 (modifică "Something Extraordinary Is Brewing")
-- **Subtitlul**: Linia 73-74 (modifică descrierea în română)
-- **Features carduri**: Linia 125-128 (modifică cele 3 carduri)
-- **Footer text**: Linia 150 (modifică copyright-ul)
+- **Logo cercuri**: Liniile 37-62 (modifică textul "two SPACE" și "THINGS WORK OUT.")
+- **Textul heading**: Liniile 66-76 (modifică "Ceva Extraordinar Se Pregătește")
+- **Subtitlul**: Liniile 81-87 (modifică descrierea în română)
+- **Features carduri**: Liniile 128-131 (modifică cele 3 carduri)
+- **Footer text**: Linia 152 (modifică copyright-ul)
+
+**Culori Brand** în `tailwind.config.js`:
+- `blood-orange` (#FF491F) - Culoarea primară
+- `grey-space` (#2B2B2B) - Gri închis
+- `chalk` (#F5F5F5) - Background
+- `cream-brand` (#F2F6D0) - Accent
+
+**Fonturi Brand**:
+- `font-space-grotesk` - Pentru headings și logo
+- `font-manrope` - Pentru body text
 
 ### 🔄 Backup-uri disponibile:
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Inter, Geist } from 'next/font/google'
+import { Inter, Geist, Space_Grotesk, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import '../styles/globals.css'
 
@@ -14,6 +14,18 @@ const heading = Geist({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-heading',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+})
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
 })
 
 export const metadata: Metadata = {
@@ -47,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ro" className={`${inter.variable} ${heading.variable}`}>
+    <html lang="ro" className={`${inter.variable} ${heading.variable} ${spaceGrotesk.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

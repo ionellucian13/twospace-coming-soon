@@ -9,7 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Two Space Premium Brand Colors
+        // Two Space Brand Colors (Official Brand Guide)
+        'blood-orange': '#FF491F',
+        'grey-space': '#2B2B2B',
+        'chalk': '#F5F5F5',
+        'cream-brand': '#F2F6D0',
+        
+        // Legacy colors (for backward compatibility)
         cream: '#F7F3EE',
         ink: '#0F172A',
         stone: '#ECE6DE', 
@@ -53,6 +59,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
         heading: ['var(--font-heading)', 'Geist', 'system-ui', 'sans-serif'],
+        // Two Space Brand Fonts
+        'space-grotesk': ['var(--font-space-grotesk)', 'Space Grotesk', 'system-ui', 'sans-serif'],
+        'manrope': ['var(--font-manrope)', 'Manrope', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
