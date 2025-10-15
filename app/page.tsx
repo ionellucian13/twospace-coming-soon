@@ -2,11 +2,17 @@
 
 import { motion } from 'framer-motion'
 import { Sparkle, Coffee, ArrowRight, EnvelopeSimple } from '@phosphor-icons/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function ComingSoon() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,43 +35,28 @@ export default function ComingSoon() {
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         
-        {/* Logo Circles - Inspired by Brand Guide */}
+        {/* Logo - Official Two Space Brand */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={mounted ? { opacity: 0, scale: 0.8 } : false}
+          animate={mounted ? { opacity: 1, scale: 1 } : false}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-16 flex justify-center items-center gap-6 flex-wrap"
+          className="mb-16 flex justify-center"
         >
-          {/* Circle 1: Two Space on Orange */}
-          <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56">
-            <div className="absolute inset-0 bg-blood-orange rounded-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-grey-space font-space-grotesk italic text-2xl sm:text-3xl md:text-4xl font-bold leading-none">
-                  two
-                </div>
-                <div className="text-grey-space font-space-grotesk text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-tight">
-                  SPACE
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Circle 2: Things Work Out on Black */}
-          <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56">
-            <div className="absolute inset-0 bg-grey-space rounded-full flex items-center justify-center p-8">
-              <div className="text-center">
-                <div className="text-chalk font-space-grotesk text-lg sm:text-xl md:text-2xl font-bold uppercase leading-tight">
-                  THINGS<br/>WORK<br/>OUT.
-                </div>
-              </div>
-            </div>
-          </div>
+          <Image
+            src="/two-space-logo.png"
+            alt="Two Space - Things Work Out"
+            width={600}
+            height={200}
+            priority
+            style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
+            className="max-w-[500px] sm:max-w-[600px]"
+          />
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl sm:text-5xl lg:text-7xl font-space-grotesk font-bold text-grey-space mb-6 leading-tight"
         >
@@ -79,8 +70,8 @@ export default function ComingSoon() {
 
         {/* Subtitle */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-lg sm:text-xl text-grey-space/70 mb-12 max-w-2xl mx-auto leading-relaxed font-manrope"
         >
@@ -90,8 +81,8 @@ export default function ComingSoon() {
 
         {/* Email Signup Form */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-md mx-auto mb-16"
         >
@@ -131,8 +122,8 @@ export default function ComingSoon() {
 
         {/* Stats/Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          animate={mounted ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
         >
@@ -143,8 +134,8 @@ export default function ComingSoon() {
           ].map((item, index) => (
             <motion.div
               key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={mounted ? { opacity: 1, y: 0 } : false}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className="flex flex-col items-center gap-3 p-6 bg-white rounded-3xl border-2 border-grey-space/10 hover:border-blood-orange/30 hover:shadow-lg transition-all duration-300 group"
             >
@@ -156,8 +147,8 @@ export default function ComingSoon() {
 
         {/* Footer Text */}
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={mounted ? { opacity: 0 } : false}
+          animate={mounted ? { opacity: 1 } : false}
           transition={{ duration: 0.8, delay: 1.3 }}
           className="mt-16 text-sm text-grey-space/50 font-manrope"
         >
