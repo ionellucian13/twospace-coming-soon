@@ -157,7 +157,12 @@ export default function ComingSoon() {
                 disabled={status === 'loading'}
                 whileHover={status !== 'loading' ? { scale: 1.05, x: 2 } : {}}
                 whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
-                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 px-4 sm:px-6 py-2 sm:py-2.5 bg-blood-orange text-white rounded-full font-semibold font-space-grotesk hover:bg-blood-orange/90 transition-all duration-300 flex items-center gap-1.5 sm:gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px]"
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 400, 
+                  damping: 17 
+                }}
+                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 px-4 sm:px-6 py-2 sm:py-2.5 bg-blood-orange text-white rounded-full font-semibold font-space-grotesk hover:bg-blood-orange/90 transition-colors duration-300 flex items-center gap-1.5 sm:gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px]"
                 aria-label="Subscribe to newsletter"
               >
                 {status === 'loading' ? (
