@@ -1,9 +1,22 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Sparkle, Coffee, ArrowRight, EnvelopeSimple, CheckCircle, XCircle } from '@phosphor-icons/react'
+import { ArrowRight, EnvelopeSimple, CheckCircle, XCircle } from '@phosphor-icons/react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+
+// Diamond Icon Component - Brand Guide
+const DiamondIcon = () => (
+  <div 
+    className="group-hover:scale-110 transition-transform duration-300"
+    style={{
+      width: '21.59px',
+      height: '21.59px',
+      background: '#FF491F',
+      transform: 'rotate(-45deg)',
+    }}
+  />
+)
 
 export default function ComingSoon() {
   const [email, setEmail] = useState('')
@@ -192,7 +205,7 @@ export default function ComingSoon() {
           )}
         </motion.div>
 
-        {/* Features Grid - Duo Space concept */}
+        {/* Features Grid - Duo Space concept with Diamond Icons */}
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
@@ -200,9 +213,9 @@ export default function ComingSoon() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto px-4"
         >
           {[
-            { label: 'Spațiu pentru Conexiuni', icon: Coffee, description: 'Energie care inspiră idei' },
-            { label: 'Spațiu pentru Creație', icon: Sparkle, description: 'Energie care construiește viziune' },
-            { label: 'Două Fețe. Un Loc.', icon: ArrowRight, description: 'Unde ideile prind formă' },
+            { label: 'Spațiu pentru Conexiuni', description: 'Energie care inspiră idei' },
+            { label: 'Spațiu pentru Creație', description: 'Energie care construiește viziune' },
+            { label: 'Două Fețe. Un Loc.', description: 'Unde ideile prind formă' },
           ].map((item, index) => (
             <motion.div
               key={item.label}
@@ -211,7 +224,7 @@ export default function ComingSoon() {
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className="flex flex-col items-center gap-3 sm:gap-4 p-6 sm:p-8 bg-white rounded-2xl sm:rounded-3xl border-2 border-grey-space/10 hover:border-blood-orange/30 hover:shadow-lg transition-all duration-300 group min-h-[120px] sm:min-h-[140px]"
             >
-              <item.icon size={40} weight="duotone" className="text-blood-orange group-hover:scale-110 transition-transform duration-300" />
+              <DiamondIcon />
               <div className="text-center">
                 <span className="text-sm sm:text-base font-semibold text-grey-space/80 font-manrope block">{item.label}</span>
                 <span className="text-xs text-grey-space/50 font-manrope mt-1 block">{item.description}</span>
